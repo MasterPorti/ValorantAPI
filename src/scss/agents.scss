@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
 .imgAgents {
   width: 400px;
 }
@@ -21,6 +23,29 @@ li {
 
   overflow: hidden;
   .agentImg {
-    width: 43vw;
+    width: 45vw;
   }
+}
+
+P {
+  font-family: "Patua One", cursive;
+}
+
+.AgentName {
+  color: #f0f8ff;
+  font-size: 4vw;
+  position: absolute;
+  top: 7vw;
+  left: 18vw;
+  filter: drop-shadow(0rem 0.5rem 0rem rgba(10, 10, 10, 0.418));
+}
+
+.InfoAgent {
+  font-size: 1vw;
+  text-align: center;
+  width: 33vw;
+  position: absolute;
+  font-family: Consolas, monaco, monospace;
+  top: 16vw;
+  left: 6vw;
 }

@@ -7,6 +7,10 @@ import agentDefault from "../assets/defaulAgent.png";
 export default function Agents() {
   const [agents, setAgents] = useState([]);
   const [agentsImagen, setImagen] = useState(agentDefault);
+  const [agentsName, setAgentsName] = useState("?????");
+  const [infoAgent, setInfoAgent] = useState(
+    "?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? ?????? "
+  );
   const [backgroundColo, setBackgroundColor] = useState("#181818");
   useEffect(() => {
     getAgents().then((uuid) => {
@@ -19,6 +23,8 @@ export default function Agents() {
         className="containerAgents"
         style={{ backgroundColor: backgroundColo }}
       >
+        <p className="AgentName">{agentsName}</p>
+        <p className="InfoAgent">{infoAgent}</p>
         <img src={agentsImagen} className="agentImg" />
       </div>
 
@@ -30,6 +36,8 @@ export default function Agents() {
               onClick={() => {
                 setImagen(value.fullPortrait);
                 setBackgroundColor("#" + value.backgroundGradientColors);
+                setAgentsName(value.displayName);
+                setInfoAgent(value.description);
               }}
             >
               {value.displayName}
@@ -37,6 +45,12 @@ export default function Agents() {
           );
         })}
       </ul>
+      <audio
+        src="https://media.valorant-api.com/sounds/963067082.wav"
+        preload="none"
+        autoPlay
+        controls
+      ></audio>
     </div>
   );
 }
