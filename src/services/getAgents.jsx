@@ -12,6 +12,7 @@ export default function getAgents() {
             uuid: value.uuid,
             displayName: value.displayName,
             fullPortrait: value.fullPortrait,
+            backgroundGradientColors: value.backgroundGradientColors[0],
           });
       });
       return uuid;

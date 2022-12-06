@@ -1,7 +1,26 @@
 .imgAgents {
   width: 400px;
 }
+ul {
+  display: flex;
+  list-style: none;
+  width: 90vw;
+  justify-content: space-around;
+}
 
 li {
   cursor: pointer;
+}
+
+.containerAgents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40vw;
+
+  overflow: hidden;
+  .agentImg {
+    width: 43vw;
+  }
 }

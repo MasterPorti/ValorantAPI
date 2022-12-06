@@ -60,13 +60,13 @@ main::selection {
 @keyframes glitch {
   0% {
     transform: translateX(20vw);
-    filter: drop-shadow(1000px 16px 0px #da4955);
+    filter: drop-shadow(62.5rem 1rem 0rem #da4955);
   }
   70% {
     transform: translateX(0vw);
   }
 
   100% {
-    filter: drop-shadow(0px 0px 0px #da4955);
+    filter: drop-shadow(0rem 0rem 0rem #da4955);
   }
 }

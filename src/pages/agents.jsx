@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import getAgents from "../services/getAgents";
 
 import "../scss/agents.scss";
+import agentDefault from "../assets/defaulAgent.png";
 
 export default function Agents() {
   const [agents, setAgents] = useState([]);
-  const [agentsImagen, setImagen] = useState(
-    "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/fullportrait.png"
-  );
+  const [agentsImagen, setImagen] = useState(agentDefault);
+  const [backgroundColo, setBackgroundColor] = useState("#181818");
   useEffect(() => {
     getAgents().then((uuid) => {
       setAgents(uuid);
@@ -15,6 +15,13 @@ export default function Agents() {
   }, []);
   return (
     <div>
+      <div
+        className="containerAgents"
+        style={{ backgroundColor: backgroundColo }}
+      >
+        <img src={agentsImagen} className="agentImg" />
+      </div>
+
       <ul>
         {agents.map((value) => {
           return (
@@ -22,6 +29,7 @@ export default function Agents() {
               key={value.uuid}
               onClick={() => {
                 setImagen(value.fullPortrait);
+                setBackgroundColor("#" + value.backgroundGradientColors);
               }}
             >
               {value.displayName}
@@ -29,8 +37,6 @@ export default function Agents() {
           );
         })}
       </ul>
-
-      <img src={agentsImagen} className="imgAgents" />
     </div>
   );
 }
