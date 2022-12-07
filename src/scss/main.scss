@@ -1,7 +1,7 @@
 main {
   font-family: Consolas, monaco, monospace;
-  height: 40vw;
-  width: 100vw;
+  height: 39rem;
+  width: 100%;
   background: rgb(85, 137, 189);
   background: linear-gradient(90deg, #18344c 75%, #66376c 100%);
   overflow: hidden;
@@ -11,13 +11,13 @@ main {
   .mainImg {
     overflow: hidden;
     .FadefullPortrait {
-      width: 40vw;
+      width: 40rem;
       transform: scale(1);
       animation: glitch 1000ms 1;
     }
     .Fadebackground {
       transform: translateX(-7vw);
-      width: 19vw;
+      width: 19rem;
       position: absolute;
     }
   }
@@ -33,11 +33,12 @@ main::selection {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 35vw;
+  width: 35rem;
   span {
+    line-height: 1em;
     color: #fff;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3em;
   }
   span::selection {
     background: #da4955;
@@ -45,10 +46,10 @@ main::selection {
 
   button {
     cursor: pointer;
-    font-size: 1.5vw;
-    margin-top: 5vw;
-    width: 18vw;
-    height: 4vw;
+    font-size: 1.5em;
+    margin-top: 5rem;
+    width: 18rem;
+    height: 4rem;
     background-color: #ff4655;
     border: none;
   }
@@ -68,5 +69,31 @@ main::selection {
 
   100% {
     filter: drop-shadow(0rem 0rem 0rem #da4955);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  main {
+    height: 30rem;
+  }
+
+  .info {
+    width: 32rem;
+    span {
+      line-height: 1em;
+      color: #fff;
+      text-align: center;
+      font-size: 2.5em;
+    }
+  }
+  main {
+    .mainImg {
+      .FadefullPortrait {
+        width: 29rem;
+      }
+      .Fadebackground {
+        width: 15rem;
+      }
+    }
   }
 }

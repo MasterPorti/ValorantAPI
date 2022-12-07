@@ -19,13 +19,21 @@ export default function Agents() {
   }, []);
   return (
     <div>
+      <div className="agentImgContainer">
+        <img src={agentsImagen} className="agentImg" />
+      </div>
       <div
         className="containerAgents"
         style={{ backgroundColor: backgroundColo }}
       >
-        <p className="AgentName">{agentsName}</p>
-        <p className="InfoAgent">{infoAgent}</p>
-        <img src={agentsImagen} className="agentImg" />
+        <div className="containerInfo">
+          <p className="AgentName">{agentsName}</p>
+          <p className="InfoAgent">{infoAgent}</p>
+        </div>
+        <div className="containerInfo">
+          <p className="AgentName">{agentsName}</p>
+          <p className="InfoAgent">{infoAgent}</p>
+        </div>
       </div>
 
       <ul>

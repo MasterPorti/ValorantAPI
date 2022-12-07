@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import "./scss/app.scss";
+import "./scss/reset.scss";
 import Agents from "./pages/agents";
 import Navbar from "./components/nav";
 
