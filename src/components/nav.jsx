@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/valorant.svg";
 
 import "../scss/nav.scss";
+import TryButton from "./tryButton";
 
 export default function Navbar() {
   return (
@@ -42,6 +42,7 @@ export default function Navbar() {
         <li>Sprays</li>
         <li>Info</li>
       </ul>
+      <TryButton />
     </nav>
   );
 }

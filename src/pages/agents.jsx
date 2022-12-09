@@ -18,22 +18,19 @@ export default function Agents() {
     });
   }, []);
   return (
-    <div>
+    <section className="agentContainer">
       <div className="agentImgContainer">
-        <img src={agentsImagen} className="agentImg" />
-      </div>
-      <div
-        className="containerAgents"
-        style={{ backgroundColor: backgroundColo }}
-      >
-        <div className="containerInfo">
-          <p className="AgentName">{agentsName}</p>
-          <p className="InfoAgent">{infoAgent}</p>
+        <img
+          src="https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/background.png"
+          className="background"
+        />
+        <div className="agentfull">
+          <img
+            className="imgAgent"
+            src="https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/fullportrait.png"
+          />
         </div>
-        <div className="containerInfo">
-          <p className="AgentName">{agentsName}</p>
-          <p className="InfoAgent">{infoAgent}</p>
-        </div>
+        <h1>HOLA</h1>
       </div>
 
       <ul>
@@ -53,12 +50,6 @@ export default function Agents() {
           );
         })}
       </ul>
-      <audio
-        src="https://media.valorant-api.com/sounds/963067082.wav"
-        preload="none"
-        autoPlay
-        controls
-      ></audio>
-    </div>
+    </section>
   );
 }

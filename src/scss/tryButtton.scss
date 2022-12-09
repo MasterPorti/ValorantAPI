@@ -1,0 +1,13 @@
+.tryButton {
+  font-size: 1.1em;
+  text-align: center;
+  background-color: #fb4553;
+  cursor: pointer;
+  padding: 0.4rem 1.3rem 0.4rem 1.3rem;
+  border-radius: 1rem;
+  transition: filter 0.3s;
+}
+
+.tryButton:hover {
+  filter: grayscale(30%);
+}

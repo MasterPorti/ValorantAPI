@@ -1,99 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 main {
-  font-family: Consolas, monaco, monospace;
-  height: 39rem;
-  width: 100%;
-  background: rgb(85, 137, 189);
-  background: linear-gradient(90deg, #18344c 75%, #66376c 100%);
-  overflow: hidden;
   display: flex;
-  justify-content: space-between;
-
-  .mainImg {
-    overflow: hidden;
-    .FadefullPortrait {
-      width: 40rem;
-      transform: scale(1);
-      animation: glitch 1000ms 1;
-    }
-    .Fadebackground {
-      transform: translateX(-7vw);
-      width: 19rem;
-      position: absolute;
-    }
-  }
-}
-
-main::selection {
-  background: #da4955;
-}
-
-.info {
-  margin-left: 4vw;
-  display: flex;
-  flex-direction: column;
+  height: 90vh;
   justify-content: center;
   align-items: center;
-  width: 35rem;
-  span {
-    line-height: 1em;
-    color: #fff;
-    text-align: center;
-    font-size: 3em;
-  }
-  span::selection {
-    background: #da4955;
-  }
-
-  button {
-    cursor: pointer;
-    font-size: 1.5em;
-    margin-top: 5rem;
-    width: 18rem;
-    height: 4rem;
-    background-color: #ff4655;
-    border: none;
-  }
-  button:hover {
-    background-color: #da4955;
-  }
 }
 
-@keyframes glitch {
-  0% {
-    transform: translateX(20vw);
-    filter: drop-shadow(62.5rem 1rem 0rem #da4955);
-  }
-  70% {
-    transform: translateX(0vw);
-  }
-
-  100% {
-    filter: drop-shadow(0rem 0rem 0rem #da4955);
-  }
+.title {
+  width: 50rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 4.0625rem;
+  margin: 0.5rem;
+  line-height: 4rem;
 }
 
-@media only screen and (max-width: 1300px) {
-  main {
-    height: 30rem;
-  }
+.subtitle {
+  width: 50rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4375rem;
+  margin-top: 2rem;
+  line-height: 2rem;
+}
 
-  .info {
-    width: 32rem;
-    span {
-      line-height: 1em;
-      color: #fff;
-      text-align: center;
-      font-size: 2.5em;
-    }
-  }
-  main {
-    .mainImg {
-      .FadefullPortrait {
-        width: 29rem;
-      }
-      .Fadebackground {
-        width: 15rem;
-      }
-    }
-  }
+.buttonContainer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.trybutton {
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #fb4553;
+  cursor: pointer;
+  padding: 0.6rem 1.6rem 0.6rem 1.6rem;
+  border-radius: 2rem;
+  transition: filter 0.3s;
+}
+.trybutton:hover {
+  filter: grayscale(30%);
+}
+
+.gitbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: transparent;
+  border: solid #fb4553 0.2rem;
+  cursor: pointer;
+  padding: 0.6rem 1.6rem 0.6rem 1.6rem;
+  border-radius: 2rem;
+  transition: background-color 0.3s;
+}
+
+.gitbutton:hover {
+  background-color: #fb4553;
+}
+
+.infoimgContainer {
+  display: flex;
+  transform: rotate(-15deg);
+  gap: 1rem;
+}
+
+.card {
+  width: 14rem;
+  border-radius: 1rem;
+
+  filter: drop-shadow(-55px 55px 100px rgba(128, 56, 56, 0.25));
+  transition: filter 1s, transform 1s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  filter: drop-shadow(-55px 55px 100px rgba(93, 216, 128, 0.25));
 }
